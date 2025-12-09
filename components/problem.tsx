@@ -80,7 +80,7 @@ export function Problem() {
             </div>
             <div className="lg:col-span-2">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Blurb doesn't try to be you. It handles the stuff that's beneath you — the sorting, the prioritizing,
+                It doesn't try to be you. It handles the stuff that's beneath you — the sorting, the prioritizing,
                 the instant responses, the follow-up scheduling — so you can spend your time on the human moments that
                 actually close deals.
               </p>

@@ -4,7 +4,7 @@ export function Manifesto() {
   return (
     <section className="py-24 lg:py-32 px-6 lg:px-8 bg-foreground text-background">
       <div className="max-w-4xl mx-auto">
-        <p className="text-xs tracking-[0.3em] uppercase text-primary mb-12">The Blurb Manifesto</p>
+        <p className="text-xs tracking-[0.3em] uppercase text-primary mb-12">The Wholesaling Manifesto</p>
 
         <div className="space-y-8 font-serif text-2xl sm:text-3xl lg:text-4xl leading-snug">
           <p>

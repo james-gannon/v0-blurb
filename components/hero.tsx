@@ -53,7 +53,7 @@ export function Hero() {
         <div className="mt-16 lg:mt-24 pt-8 border-t border-border flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8 opacity-0 animate-fade-up delay-400">
           <div className="max-w-lg">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              <span className="text-foreground font-medium">Blurb is your unfair advantage.</span> Instant responses,
+              <span className="text-foreground font-medium">It's your unfair advantage.</span> Instant responses,
               prioritized leads, zero robotic vibes. You stay human. You just move faster.
             </p>
           </div>

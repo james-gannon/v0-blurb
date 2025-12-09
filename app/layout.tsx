@@ -9,12 +9,12 @@ const _playfair = Playfair_Display({ subsets: ["latin"] })
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Blurb | Stop Losing Leads to Faster Agents",
+  title: "WholesalerPhone | Stop Losing Leads to Faster Agents",
   description: "You're not bad at sales. You're just slow at texting back. We fixed that.",
   generator: "v0.app",
   keywords: ["real estate", "AI", "communication", "CRM", "lead management", "SMS", "phone calls"],
   openGraph: {
-    title: "Blurb | Stop Losing Leads to Faster Agents",
+    title: "WholesalerPhone | Stop Losing Leads to Faster Agents",
     description: "You're not bad at sales. You're just slow at texting back. We fixed that.",
     type: "website",
   },

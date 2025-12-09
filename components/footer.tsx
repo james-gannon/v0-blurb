@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-12 gap-12 mb-12">
           <div className="md:col-span-6">
             <Link href="/" className="text-2xl font-serif font-semibold tracking-tight text-foreground">
-              blurb
+              WholesalerPhone
             </Link>
             <p className="text-muted-foreground mt-4 max-w-sm leading-relaxed">
               AI-powered communication for real estate humans who are tired of losing deals to agents who are just
@@ -63,7 +63,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 Blurb. Built with too much coffee and not enough sleep.
+            © 2025 WholesalerPhone. Built with too much coffee and not enough sleep.
           </p>
           <p className="text-sm text-muted-foreground italic">Made for agents who actually want to win.</p>
         </div>

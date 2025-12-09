@@ -26,7 +26,7 @@ export function FinalCTA() {
         </p>
 
         <div className="bg-muted/50 p-8 max-w-lg mx-auto mb-12">
-          <p className="text-sm text-muted-foreground mb-4">Blurb doesn't replace the human touch.</p>
+          <p className="text-sm text-muted-foreground mb-4">It doesn't replace the human touch.</p>
           <p className="text-lg text-foreground font-medium">It frees you up to give more of it.</p>
         </div>
 
