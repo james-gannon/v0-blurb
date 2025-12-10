@@ -5,20 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 
-const trackCTAClick = () => {
-  if (typeof window !== "undefined" && (window as any).gtag) {
-    ;(window as any).gtag("event", "click_early_access_cta", {
-      event_category: "engagement",
-      event_label: "header_cta",
-    })
-  }
-}
-
-const scrollToForm = () => {
-  trackCTAClick()
-  document.getElementById("early-access-form")?.scrollIntoView({ behavior: "smooth" })
-}
-
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -32,7 +18,13 @@ export function Header() {
 
           <nav className="hidden md:flex items-center gap-12">
             <Link
-              href="#how-it-works"
+              href="#problem"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide"
+            >
+              The Problem
+            </Link>
+            <Link
+              href="#how"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide"
             >
               How It Works
@@ -48,9 +40,9 @@ export function Header() {
           <div className="hidden md:block">
             <Button
               className="bg-foreground text-background hover:bg-foreground/90 text-sm px-6 h-11"
-              onClick={scrollToForm}
+              onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Get Early Access
+              Get in early
             </Button>
           </div>
 
@@ -62,18 +54,16 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-6 border-b border-border">
             <nav className="flex flex-col gap-6">
-              <Link
-                href="#how-it-works"
-                className="text-lg text-muted-foreground hover:text-foreground transition-colors"
-              >
+              <Link href="#problem" className="text-lg text-muted-foreground hover:text-foreground transition-colors">
+                The Problem
+              </Link>
+              <Link href="#how" className="text-lg text-muted-foreground hover:text-foreground transition-colors">
                 How It Works
               </Link>
               <Link href="#pricing" className="text-lg text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
               </Link>
-              <Button className="bg-foreground text-background w-full mt-4" onClick={scrollToForm}>
-                Get Early Access
-              </Button>
+              <Button className="bg-foreground text-background w-full mt-4">Get in early</Button>
             </nav>
           </div>
         )}
