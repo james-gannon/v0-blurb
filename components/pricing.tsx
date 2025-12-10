@@ -3,17 +3,20 @@
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 
-const trackCTAClick = (plan: string) => {
+const trackPlanClick = (planName: string) => {
   if (typeof window !== "undefined" && (window as any).gtag) {
-    ;(window as any).gtag("event", "click_early_access_cta", {
-      event_category: "engagement",
-      event_label: `pricing_choose_${plan}`,
+    // Fire a specific event for each plan
+    ;(window as any).gtag("event", `click_choose_${planName.toLowerCase()}`, {
+      event_category: "pricing",
+      event_label: `${planName} Plan Selected`,
+      plan_name: planName,
+      plan_price: planName === "Solo" ? "$99/mo" : "$299/mo",
     })
   }
 }
 
 const scrollToFormWithPlan = (plan: string) => {
-  trackCTAClick(plan)
+  trackPlanClick(plan)
   const form = document.getElementById("early-access-form")
   if (form) {
     form.scrollIntoView({ behavior: "smooth" })

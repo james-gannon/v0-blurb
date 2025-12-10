@@ -9,22 +9,32 @@ import { Label } from "@/components/ui/label"
 
 export default function ThanksPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [deals, setDeals] = useState("")
+  const [teamSize, setTeamSize] = useState("")
+  const [plan, setPlan] = useState("")
+  const [readiness, setReadiness] = useState("")
 
   useEffect(() => {
     if (typeof window !== "undefined" && (window as any).gtag) {
-      ;(window as any).gtag("event", "page_view", {
-        page_title: "Thank You - Early Access",
-        page_location: window.location.href,
+      ;(window as any).gtag("event", "conversion_signup_complete", {
+        event_category: "conversion",
+        event_label: "Early Access Signup Complete",
         page_path: "/thanks",
-      })
-      // Track as conversion
-      ;(window as any).gtag("event", "conversion", {
-        send_to: "AW-CONVERSION_ID/CONVERSION_LABEL", // Replace with actual conversion ID
       })
     }
   }, [])
 
   const handleOptionalSubmit = () => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      ;(window as any).gtag("event", "survey_submit_qualification", {
+        event_category: "engagement",
+        event_label: "Post-Signup Survey Completed",
+        deals_closed: deals,
+        team_size: teamSize,
+        plan_interest: plan,
+        readiness_timeframe: readiness,
+      })
+    }
     setSubmitted(true)
   }
 
@@ -48,7 +58,7 @@ export default function ThanksPage() {
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="deals">Deals closed in last 12 months</Label>
-                <Select>
+                <Select value={deals} onValueChange={setDeals}>
                   <SelectTrigger id="deals">
                     <SelectValue placeholder="Select range" />
                   </SelectTrigger>
@@ -63,7 +73,7 @@ export default function ThanksPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="team-size">Team size</Label>
-                <Select>
+                <Select value={teamSize} onValueChange={setTeamSize}>
                   <SelectTrigger id="team-size">
                     <SelectValue placeholder="Select size" />
                   </SelectTrigger>
@@ -78,7 +88,7 @@ export default function ThanksPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="plan">Plan you're likely to choose</Label>
-                <Select>
+                <Select value={plan} onValueChange={setPlan}>
                   <SelectTrigger id="plan">
                     <SelectValue placeholder="Select plan" />
                   </SelectTrigger>
@@ -92,7 +102,7 @@ export default function ThanksPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="readiness">When are you ready to start?</Label>
-                <Select>
+                <Select value={readiness} onValueChange={setReadiness}>
                   <SelectTrigger id="readiness">
                     <SelectValue placeholder="Select timeframe" />
                   </SelectTrigger>

@@ -10,11 +10,13 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Check, ArrowRight } from "lucide-react"
 
-const trackCTAClick = (label: string) => {
+const trackCTAClick = (eventName: string, location: string, additionalParams?: Record<string, string>) => {
   if (typeof window !== "undefined" && (window as any).gtag) {
-    ;(window as any).gtag("event", "click_early_access_cta", {
+    ;(window as any).gtag("event", eventName, {
       event_category: "engagement",
-      event_label: label,
+      event_label: location,
+      button_location: location,
+      ...additionalParams,
     })
   }
 }
@@ -27,14 +29,15 @@ export function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const scrollToHowItWorks = () => {
-    trackCTAClick("see_how_it_works")
+    trackCTAClick("click_see_how_it_works", "hero_section")
     document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    trackCTAClick("hero_form_submit")
+
+    trackCTAClick("form_submit_early_access", "hero_form", { user_role: role })
 
     // Simulate form submission - replace with actual Tally embed or API call
     await new Promise((resolve) => setTimeout(resolve, 500))
@@ -88,7 +91,7 @@ export function Hero() {
                 size="lg"
                 className="bg-foreground text-background hover:bg-foreground/90 text-base px-8 h-14"
                 onClick={() => {
-                  trackCTAClick("hero_get_early_access")
+                  trackCTAClick("click_early_access_cta", "hero_primary_button")
                   document.getElementById("early-access-form")?.scrollIntoView({ behavior: "smooth" })
                 }}
               >
