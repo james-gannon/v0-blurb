@@ -1,12 +1,11 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import { Marquee } from "@/components/marquee"
-import { Problem } from "@/components/problem"
-import { Features } from "@/components/features"
-import { Manifesto } from "@/components/manifesto"
-import { Testimonials } from "@/components/testimonials"
+import { SocialProof } from "@/components/social-proof"
+import { Pain } from "@/components/pain"
+import { HowItWorks } from "@/components/how-it-works"
+import { ProductScreens } from "@/components/product-screens"
 import { Pricing } from "@/components/pricing"
-import { FinalCTA } from "@/components/final-cta"
+import { FounderNote } from "@/components/founder-note"
 import { Footer } from "@/components/footer"
 
 export default function LandingPage() {
@@ -14,13 +13,12 @@ export default function LandingPage() {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <Hero />
-      <Marquee />
-      <Problem />
-      <Features />
-      <Manifesto />
-      <Testimonials />
+      <SocialProof />
+      <Pain />
+      <HowItWorks />
+      <ProductScreens />
       <Pricing />
-      <FinalCTA />
+      <FounderNote />
       <Footer />
     </main>
   )
