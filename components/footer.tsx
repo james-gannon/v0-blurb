@@ -1,6 +1,15 @@
 import Link from "next/link"
 
 export function Footer() {
+  const links = [
+    { label: "Pricing", href: "#pricing" },
+    { label: "FAQs", href: "#faqs" },
+    { label: "Security", href: "#security" },
+    { label: "Terms", href: "/terms" },
+    { label: "Privacy", href: "/privacy" },
+    { label: "Contact", href: "mailto:support@wholesalerphone.com" },
+  ]
+
   return (
     <footer className="py-16 px-6 lg:px-8 border-t border-border">
       <div className="max-w-7xl mx-auto">
@@ -10,62 +19,37 @@ export function Footer() {
               WholesalerPhone
             </Link>
             <p className="text-muted-foreground mt-4 max-w-sm leading-relaxed">
-              AI-powered communication for real estate humans who are tired of losing deals to agents who are just
-              faster.
+              AI-powered business phone and SMS inbox built specifically for wholesalers and acquisitions teams.
+            </p>
+            <p className="text-muted-foreground mt-4">
+              <a
+                href="mailto:support@wholesalerphone.com"
+                className="hover:text-foreground transition-colors underline"
+              >
+                support@wholesalerphone.com
+              </a>
             </p>
           </div>
 
-          <div className="md:col-span-3">
-            <p className="text-sm font-medium text-foreground mb-4">Product</p>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#features"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="#how" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  How It Works
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="md:col-span-3">
-            <p className="text-sm font-medium text-foreground mb-4">Company</p>
-            <ul className="space-y-3">
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Privacy
-                </Link>
-              </li>
+          <div className="md:col-span-6">
+            <p className="text-sm font-medium text-foreground mb-4">Links</p>
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {links.map((link, i) => (
+                <li key={i}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2025 WholesalerPhone. Built with too much coffee and not enough sleep.
-          </p>
-          <p className="text-sm text-muted-foreground italic">Made for agents who actually want to win.</p>
+          <p className="text-sm text-muted-foreground">© 2025 WholesalerPhone. All rights reserved.</p>
         </div>
       </div>
     </footer>
