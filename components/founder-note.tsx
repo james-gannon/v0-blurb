@@ -18,7 +18,7 @@ export function FounderNote() {
           <div className="flex-1">
             <p className="text-xs tracking-[0.3em] uppercase text-primary mb-6">From the founder</p>
             <blockquote className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-snug mb-6">
-              "We built WholesalerPhone so no acquisitions ever loses a motivated seller again."
+              "We built WholesalerPhone so no acquisitions team ever loses a motivated seller again."
             </blockquote>
             <p className="text-foreground font-medium">— James</p>
             <p className="text-muted-foreground text-sm">WholesalerPhone</p>
