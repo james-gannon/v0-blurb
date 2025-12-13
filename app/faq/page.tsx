@@ -49,14 +49,9 @@ export default function FAQPage() {
         "WholesalerPhone is fully compliant with TCPA regulations and carrier requirements. We handle opt-out requests automatically (STOP replies), maintain message logs, and provide compliance tools to keep you protected. You're responsible for obtaining proper consent before messaging leads.",
     },
     {
-      question: "Do you store call recordings?",
-      answer:
-        "Yes, all calls are recorded and transcribed for your review (and compliance). You can search transcripts, review conversations, and use them for training. Recordings are stored securely and encrypted.",
-    },
-    {
       question: "When will WholesalerPhone be available?",
       answer:
-        "We're launching early access in January 2025. The first 50 members lock in lifetime pricing and get priority onboarding. Join the waitlist to reserve your spot.",
+        "We're launching early access Q1 2026. The first 50 members lock in lifetime pricing and get priority onboarding. Join the waitlist to reserve your spot.",
     },
     {
       question: "How do I get started?",
@@ -71,17 +66,17 @@ export default function FAQPage() {
     {
       question: "Can I integrate WholesalerPhone with my CRM?",
       answer:
-        "Not yet, but CRM integrations (REsimpli, Podio, etc.) are on our roadmap for Q2 2025. We'll keep you updated as we add new features.",
+        "We are currently integrated with Attio (attio.com). Additional CRM integrations (Salesforce, Podio, etc.) are on our roadmap. We'll keep you updated as we add new features.",
     },
     {
       question: "How secure is my data?",
       answer:
-        "Very secure. All data is encrypted in transit and at rest. We use industry-standard security practices and never sell your data to third parties. See our Privacy Policy for full details.",
+        "All data is encrypted in transit and at rest. We use industry-standard security practices and never sell your data to third parties. See our Privacy Policy for full details.",
     },
     {
       question: "What if I need help or support?",
       answer:
-        "Email us anytime at support@wholesalerphone.com. We typically respond within 24 hours during business days. Early access members get priority support.",
+        "Email us anytime at support@wholesalerphone.com. We typically respond within 24 hours during business days.",
     },
   ]
 
