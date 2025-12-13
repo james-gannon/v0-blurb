@@ -2,12 +2,11 @@ import Link from "next/link"
 
 export function Footer() {
   const links = [
-    { label: "Pricing", href: "#pricing" },
-    { label: "FAQs", href: "#faqs" },
-    { label: "Security", href: "#security" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "FAQs", href: "/faq" },
+    { label: "Contact", href: "/contact" },
     { label: "Terms", href: "/terms" },
     { label: "Privacy", href: "/privacy" },
-    { label: "Contact", href: "mailto:support@wholesalerphone.com" },
   ]
 
   return (
@@ -26,7 +25,7 @@ export function Footer() {
                 href="mailto:support@wholesalerphone.com"
                 className="hover:text-foreground transition-colors underline"
               >
-                support@wholesalerphone.com
+                hello@wholesalerphone.com
               </a>
             </p>
           </div>
@@ -46,6 +45,26 @@ export function Footer() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="py-6 border-t border-border">
+          <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl">
+            <strong>SMS Disclosure:</strong> By using WholesalerPhone, you consent to receive SMS messages related to
+            your account, service notifications, and lead activity. Message frequency varies. Message and data rates may
+            apply. Reply STOP to opt out of non-essential messages. Reply HELP for assistance or contact{" "}
+            <a href="mailto:support@wholesalerphone.com" className="underline hover:text-foreground">
+              support@wholesalerphone.com
+            </a>
+            . View our{" "}
+            <Link href="/terms" className="underline hover:text-foreground">
+              Terms
+            </Link>{" "}
+            and{" "}
+            <Link href="/privacy" className="underline hover:text-foreground">
+              Privacy Policy
+            </Link>
+            .
+          </p>
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
