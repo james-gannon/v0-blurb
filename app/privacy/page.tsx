@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">1. Introduction</h2>
             <p className="leading-relaxed">
-              WholesalerPhone LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
+              STONEY LLC doing business as WholesalerPhone ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your information when you use our services,
               including our website and mobile/web applications.
             </p>
@@ -117,6 +117,9 @@ export default function PrivacyPage() {
                 <strong>With Your Consent:</strong> When you explicitly authorize us to share your information
               </li>
             </ul>
+            <p className="leading-relaxed mt-4 p-4 bg-muted border border-border">
+              <strong>Important Notice Regarding Mobile Information:</strong> No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+            </p>
           </section>
 
           <section>

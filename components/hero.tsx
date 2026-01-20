@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Check, ArrowRight } from "lucide-react"
+import { Checkbox } from "@/components/ui/checkbox"
 
 const trackCTAClick = (eventName: string, location: string, additionalParams?: Record<string, string>) => {
   if (typeof window !== "undefined" && (window as any).gtag) {
@@ -26,6 +27,7 @@ export function Hero() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [role, setRole] = useState("")
+  const [smsConsent, setSmsConsent] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const scrollToHowItWorks = () => {
@@ -161,11 +163,24 @@ export function Hero() {
                   </Select>
                 </div>
 
+                <div className="flex items-start space-x-3 pt-2">
+                  <Checkbox
+                    id="sms-consent"
+                    checked={smsConsent}
+                    onCheckedChange={(checked) => setSmsConsent(checked as boolean)}
+                    required
+                    className="mt-1"
+                  />
+                  <Label htmlFor="sms-consent" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                    I agree to receive SMS from STONEY LLC. Frequency varies. Data & rates may apply. Reply STOP to opt out.
+                  </Label>
+                </div>
+
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-14 text-base"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !smsConsent}
                 >
                   {isSubmitting ? "Submitting..." : "Get Early Access"}
                 </Button>

@@ -20,7 +20,7 @@ export default function TermsPage() {
             <p className="leading-relaxed">
               By accessing or using WholesalerPhone ("Service"), you agree to be bound by these Terms of Service
               ("Terms"). If you do not agree to these Terms, do not use the Service. These Terms constitute a binding
-              legal agreement between you and WholesalerPhone LLC ("Company," "we," "us," or "our").
+              legal agreement between you and STONEY LLC doing business as WholesalerPhone ("Company," "we," "us," or "our").
             </p>
           </section>
 
@@ -132,7 +132,7 @@ export default function TermsPage() {
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">8. Intellectual Property</h2>
             <p className="leading-relaxed">
               All content, features, and functionality of the Service (including text, graphics, logos, software, and
-              design) are owned by WholesalerPhone LLC and protected by copyright, trademark, and other intellectual
+              design) are owned by STONEY LLC and protected by copyright, trademark, and other intellectual
               property laws.
             </p>
             <p className="leading-relaxed mt-4">
@@ -186,7 +186,7 @@ export default function TermsPage() {
               increased deals, revenue, or business outcomes.
             </p>
             <p className="leading-relaxed mt-4">
-              <strong>Limitation of Liability:</strong> To the maximum extent permitted by law, WholesalerPhone LLC
+              <strong>Limitation of Liability:</strong> To the maximum extent permitted by law, STONEY LLC
               shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss
               of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or
               other intangible losses resulting from:
@@ -205,7 +205,7 @@ export default function TermsPage() {
           <section>
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">13. Indemnification</h2>
             <p className="leading-relaxed">
-              You agree to indemnify, defend, and hold harmless WholesalerPhone LLC, its officers, directors, employees,
+              You agree to indemnify, defend, and hold harmless STONEY LLC, its officers, directors, employees,
               and agents from any claims, losses, damages, liabilities, and expenses (including legal fees) arising
               from:
             </p>
@@ -284,7 +284,7 @@ export default function TermsPage() {
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">19. Entire Agreement</h2>
             <p className="leading-relaxed">
               These Terms, together with our Privacy Policy, constitute the entire agreement between you and
-              WholesalerPhone LLC regarding the Service.
+              STONEY LLC regarding the Service.
             </p>
           </section>
 
