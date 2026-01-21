@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -163,17 +164,23 @@ export function Hero() {
                   </Select>
                 </div>
 
-                <div className="flex items-start space-x-3 pt-2">
-                  <Checkbox
-                    id="sms-consent"
-                    checked={smsConsent}
-                    onCheckedChange={(checked) => setSmsConsent(checked as boolean)}
-                    required
-                    className="mt-1"
-                  />
-                  <Label htmlFor="sms-consent" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                    I agree to receive SMS from STONEY LLC. Frequency varies. Data & rates may apply. Reply STOP to opt out.
-                  </Label>
+                <div className="pt-2">
+                  <label htmlFor="sms-consent" className="flex items-start gap-3 cursor-pointer">
+                    <Checkbox
+                      id="sms-consent"
+                      checked={smsConsent}
+                      onCheckedChange={(checked) => setSmsConsent(checked as boolean)}
+                      required
+                      className="mt-0.5 flex-shrink-0"
+                    />
+                    <span className="text-sm text-muted-foreground leading-relaxed">
+                      By submitting this form, you agree to receive follow-up messages from STONEY LLC. Text and data rates may apply. Message frequency varies. Reply STOP to unsubscribe. See our{" "}
+                      <Link href="/privacy" className="underline underline-offset-2 hover:text-foreground">
+                        privacy policy
+                      </Link>{" "}
+                      for more details.
+                    </span>
+                  </label>
                 </div>
 
                 <Button
