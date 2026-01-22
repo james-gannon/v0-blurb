@@ -69,6 +69,13 @@ export default function ContactPage() {
               </a>
             </p>
           </section>
+
+          <section>
+            <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">Send us a Message</h2>
+            <div className="mt-6">
+              <close-form id="form_032ERpzVd4aZZt5kGrS4Eb" />
+            </div>
+          </section>
         </div>
       </div>
       <Footer />

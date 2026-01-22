@@ -85,6 +85,10 @@ export default function RootLayout({
             });
           `}
         </Script>
+
+        {/* Close CRM Webform */}
+        <Script src="https://webforms.closeiocdn.com/webforms.js" type="module" crossOrigin="anonymous" defer />
+      
       </head>
       <body className={`font-sans antialiased`}>
         <noscript>
