@@ -193,7 +193,7 @@ export function Hero() {
                       className="mt-0.5 flex-shrink-0"
                     />
                     <span className="text-sm text-muted-foreground leading-relaxed">
-                      You agree to receive automated transactional messages with varying frequency from STONEY, LLC.
+                      You agree to receive automated transactional messages with varying frequency from PorchLight Home Offers LLC.
                       Txt and data rates may apply. Reply STOP to end. Text HELP for help. Click for{" "}
                       <Link href="/terms" className="underline underline-offset-2 hover:text-foreground">
                         Terms of Service
@@ -214,7 +214,7 @@ export function Hero() {
                       className="mt-0.5 flex-shrink-0"
                     />
                     <span className="text-sm text-muted-foreground leading-relaxed">
-                      You agree to receive automated promotional messages with varying frequency from STONEY, LLC. Txt
+                      You agree to receive automated promotional messages with varying frequency from PorchLight Home Offers LLC. Txt
                       and data rates may apply. Reply STOP to end. Text HELP for help. Click for{" "}
                       <Link href="/terms" className="underline underline-offset-2 hover:text-foreground">
                         Terms of Service

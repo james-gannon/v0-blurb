@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">1. Introduction</h2>
             <p className="leading-relaxed">
-              STONEY LLC doing business as WholesalerPhone ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
+              PorchLight Home Offers LLC doing business as WholesalerPhone ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your information when you use our services,
               including our website and mobile/web applications.
             </p>
