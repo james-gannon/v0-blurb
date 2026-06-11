@@ -33,7 +33,7 @@ export default function ContactPage() {
           <section>
             <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">Business Information</h2>
             <p className="leading-relaxed">
-              <strong>Company Name:</strong> STONEY LLC (d/b/a WholesalerPhone)
+              <strong>Company Name:</strong> PorchLight Home Offers LLC (d/b/a WholesalerPhone)
             </p>
             <p className="leading-relaxed">
               <strong>Business Address:</strong> 225 Dyer St, Providence, RI 02903

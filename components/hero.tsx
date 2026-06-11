@@ -27,8 +27,10 @@ export function Hero() {
   const router = useRouter()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
   const [role, setRole] = useState("")
-  const [smsConsent, setSmsConsent] = useState(false)
+  const [transactionalConsent, setTransactionalConsent] = useState(false)
+  const [promotionalConsent, setPromotionalConsent] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const scrollToHowItWorks = () => {
@@ -40,7 +42,11 @@ export function Hero() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    trackCTAClick("form_submit_early_access", "hero_form", { user_role: role })
+    trackCTAClick("form_submit_early_access", "hero_form", {
+      user_role: role,
+      transactional_consent: String(transactionalConsent),
+      promotional_consent: String(promotionalConsent),
+    })
 
     // Simulate form submission - replace with actual Tally embed or API call
     await new Promise((resolve) => setTimeout(resolve, 500))
@@ -151,6 +157,20 @@ export function Hero() {
                 </div>
 
                 <div className="space-y-2">
+                  <Label htmlFor="phone">
+                    Phone <span className="text-muted-foreground font-normal">(optional)</span>
+                  </Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    placeholder="(555) 555-5555"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="h-12 bg-background"
+                  />
+                </div>
+
+                <div className="space-y-2">
                   <Label htmlFor="role">Role</Label>
                   <Select value={role} onValueChange={setRole} required>
                     <SelectTrigger id="role" className="h-12 bg-background">
@@ -164,21 +184,46 @@ export function Hero() {
                   </Select>
                 </div>
 
-                <div className="pt-2">
-                  <label htmlFor="sms-consent" className="flex items-start gap-3 cursor-pointer">
+                <div className="space-y-4 pt-2">
+                  <label htmlFor="transactional-consent" className="flex items-start gap-3 cursor-pointer">
                     <Checkbox
-                      id="sms-consent"
-                      checked={smsConsent}
-                      onCheckedChange={(checked) => setSmsConsent(checked as boolean)}
-                      required
+                      id="transactional-consent"
+                      checked={transactionalConsent}
+                      onCheckedChange={(checked) => setTransactionalConsent(checked as boolean)}
                       className="mt-0.5 flex-shrink-0"
                     />
                     <span className="text-sm text-muted-foreground leading-relaxed">
-                      By submitting this form, you agree to receive follow-up messages from STONEY LLC. Text and data rates may apply. Message frequency varies. Reply STOP to unsubscribe. See our{" "}
+                      You agree to receive automated transactional messages with varying frequency from PorchLight Home Offers LLC.
+                      Txt and data rates may apply. Reply STOP to end. Text HELP for help. Click for{" "}
+                      <Link href="/terms" className="underline underline-offset-2 hover:text-foreground">
+                        Terms of Service
+                      </Link>
+                      ,{" "}
                       <Link href="/privacy" className="underline underline-offset-2 hover:text-foreground">
-                        privacy policy
-                      </Link>{" "}
-                      for more details.
+                        Privacy Policy
+                      </Link>
+                      .
+                    </span>
+                  </label>
+
+                  <label htmlFor="promotional-consent" className="flex items-start gap-3 cursor-pointer">
+                    <Checkbox
+                      id="promotional-consent"
+                      checked={promotionalConsent}
+                      onCheckedChange={(checked) => setPromotionalConsent(checked as boolean)}
+                      className="mt-0.5 flex-shrink-0"
+                    />
+                    <span className="text-sm text-muted-foreground leading-relaxed">
+                      You agree to receive automated promotional messages with varying frequency from PorchLight Home Offers LLC. Txt
+                      and data rates may apply. Reply STOP to end. Text HELP for help. Click for{" "}
+                      <Link href="/terms" className="underline underline-offset-2 hover:text-foreground">
+                        Terms of Service
+                      </Link>
+                      ,{" "}
+                      <Link href="/privacy" className="underline underline-offset-2 hover:text-foreground">
+                        Privacy Policy
+                      </Link>
+                      .
                     </span>
                   </label>
                 </div>
@@ -187,7 +232,7 @@ export function Hero() {
                   type="submit"
                   size="lg"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-14 text-base"
-                  disabled={isSubmitting || !smsConsent}
+                  disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Get Early Access"}
                 </Button>
